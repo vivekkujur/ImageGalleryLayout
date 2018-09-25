@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">ImageGalleryLayout</string>
+    <string name="Rs">\u20B9</string>
+    <string name="sample">Product Description</string>
+    <string name="join">join now</string>
+    <string name="description">A pair of round-toe white sneakers, has regular styling, lace-up detail \n
+PU textured upper \n
+Cushioned footbed \n
+Textured and patterned outsole \n
+Warranty: 3 months \n
+Warranty provided by brand/manufacturer \n</string>
+    <string name="buy_with_friends_price">400</string>
+    <string name="buy_product_price">800</string>
 </resources>

@@ -4,7 +4,7 @@ android {
     compileSdkVersion 27
     defaultConfig {
         applicationId "com.example.uchiha.imagegallerylayout"
-        minSdkVersion 14
+        minSdkVersion 17
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"
@@ -35,5 +35,9 @@ dependencies {
     implementation 'com.squareup.okhttp3:okhttp:3.4.1'
 
     implementation 'com.squareup.picasso:picasso:2.71828'
-    implementation 'com.jaredrummler:material-spinner:1.2.5'
+
+    implementation 'com.github.medyo:fancybuttons:1.9.0'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.github.aakira:expandable-layout:1.6.0@aar'
+
 }

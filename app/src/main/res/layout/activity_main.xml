@@ -1,68 +1,221 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/SlideViewPager"
-        android:layout_width="match_parent"
-        android:layout_height="445dp"
-        android:background="@color/backgroungcolor"
-        >
 
-    </android.support.v4.view.ViewPager>
 
-    <LinearLayout
-        android:id="@+id/DotsLayout"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:layout_below="@+id/SlideViewPager"
-        android:gravity="center"
-        android:orientation="horizontal"></LinearLayout>
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:id="@+id/scrollView"
+        android:layout_above="@+id/buylayoutButton"
+        android:layout_alignParentTop="true">
 
-    <Button
-        android:id="@+id/priceBotton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/SlideViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="375dp"
+                android:background="@color/backgroungcolor">
+
+            </android.support.v4.view.ViewPager>
+
+            <LinearLayout
+                android:id="@+id/DotsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@+id/SlideViewPager"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/name_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/DotsLayout"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:background="@color/colorLayout"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    >
+
+                    <mehdi.sakout.fancybuttons.FancyButton
+                        android:id="@+id/button1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:elevation="5dp"
+                        android:gravity="center"
+                        android:paddingBottom="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="10dp"
+                        fancy:fb_borderWidth="1dp"
+                        fancy:fb_defaultColor="@color/colorwhite"
+                        fancy:fb_focusColor="@color/colorwhite"
+                        fancy:fb_iconPosition="left"
+                        fancy:fb_radius="30dp"
+                        fancy:fb_text="Share"
+                        fancy:fb_textColor="@color/secondary_text" />
+
+                    <mehdi.sakout.fancybuttons.FancyButton
+                        android:id="@+id/button2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:elevation="5dp"
+                        android:gravity="center"
+                        android:paddingBottom="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="10dp"
+                        fancy:fb_borderWidth="1dp"
+                        fancy:fb_defaultColor="@color/colorwhite"
+                        fancy:fb_focusColor="@color/colorwhite"
+                        fancy:fb_iconPosition="left"
+                        fancy:fb_radius="30dp"
+                        fancy:fb_text="Gift"
+                        fancy:fb_textColor="@color/secondary_text" />
+
+                    <mehdi.sakout.fancybuttons.FancyButton
+                        android:id="@+id/button3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:elevation="5dp"
+                        android:gravity="center"
+                        android:paddingBottom="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="10dp"
+                        fancy:fb_borderWidth="1dp"
+                        fancy:fb_defaultColor="@color/colorwhite"
+                        fancy:fb_focusColor="@color/colorwhite"
+                        fancy:fb_iconPosition="left"
+                        fancy:fb_radius="30dp"
+                        fancy:fb_text="Add to collection"
+                        fancy:fb_textColor="@color/secondary_text" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/nametextview"
+                    android:layout_width="279dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/spinner"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="3"
+                    android:text="TextView"
+                    android:textAlignment="center"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/nunito_semibold_italic" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="COLOR"
+                    android:layout_marginTop="10dp"
+                    android:textAlignment="center" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="5dp">
+
+                    <mehdi.sakout.fancybuttons.FancyButton
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        fancy:fb_text=""
+                        fancy:fb_defaultColor="#000000"
+                        fancy:fb_focusColor="#000000"
+                        android:id="@+id/color1"
+                        fancy:fb_radius="30dp"
+                        fancy:fb_borderColor="@color/secondary_text"
+                        fancy:fb_borderWidth="1dp"
+                        android:layout_marginRight="5dp"
+                        >
+
+                    </mehdi.sakout.fancybuttons.FancyButton>
+
+                    <mehdi.sakout.fancybuttons.FancyButton
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        fancy:fb_text=""
+                        fancy:fb_defaultColor="#ffffff"
+                        fancy:fb_focusColor="#ffffff"
+                        android:id="@+id/color2"
+                        android:layout_marginRight="5dp"
+                        fancy:fb_borderColor="@color/secondary_text"
+                        fancy:fb_borderWidth="1dp"
+                        fancy:fb_radius="30dp"
+
+                        >
+
+                    </mehdi.sakout.fancybuttons.FancyButton>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name_layout">
+
+                <include layout="@layout/join_and_buy_layout" android:id="@+id/joinlayo"/>
+
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/divider3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider" />
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+    <include
+        android:id="@+id/buylayoutButton"
+        layout="@layout/buynowlayout"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:background="@color/colorPrimaryDark"
-        android:text="Button" />
-
-    <LinearLayout
-        android:id="@+id/name_layout"
-        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_below="@+id/DotsLayout"
-        android:padding="2dp"
-        android:gravity="center_vertical"
-        android:weightSum="5">
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="279dp"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/spinner"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_weight="3"
-            android:text="TextView"
-            android:textColor="@color/primary_text"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            app:fontFamily="@font/nunito_semibold_italic" />
-
-        <com.jaredrummler.materialspinner.MaterialSpinner
-            android:id="@+id/spinner"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-           />
-    </LinearLayout>
+        android:layout_width="match_parent"/>
 
 
 
